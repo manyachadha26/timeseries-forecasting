@@ -5,6 +5,10 @@ import pandas as pd
 import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
+import joblib
+
+arima_model = joblib.load('arima_model.joblib')
+prophet_model = joblib.load('prophet_model.joblib')
 
 app = Flask(__name__)
 CORS(app)
